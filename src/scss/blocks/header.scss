@@ -1,13 +1,9 @@
-.container__1{
-    display: flex;
-    flex-direction: column;
-}
-
 .header{
     padding: 30px 0 23px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    z-index: 1000;
 }
 
 .menu{
@@ -29,7 +25,7 @@
             content: '';
             position: absolute;
             height: 2px;
-            background: $wt;
+            background: $white;
             top: auto;
             bottom: 0;
             left: 50%;
@@ -47,25 +43,3 @@
     }
 
 }
-
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 35px;
-    margin: auto 150px;
-    max-width: 480px;
-    height: 100%;
-
-    &__title{
-        font-size: 60px;
-        line-height: 1.3;
-        font-weight: bold;
-
-        span{
-            color: $rd;
-        }
-    }
-}
-
-

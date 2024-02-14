@@ -1,0 +1,33 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+@import './blocks/header';
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    margin: auto 150px;
+    max-width: 480px;
+    height: 100%;
+
+    &__title{
+        font-size: 60px;
+        line-height: 1.3;
+        font-weight: bold;
+
+        span{
+            color: $rd;
+        }
+    }
+}
+
+
+@import './blocks/footer';
+
+@import 'media';
+
+
