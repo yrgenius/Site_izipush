@@ -42,22 +42,40 @@ const path = {
     clean: './' + distPath + '*'
 }
 
+const fileIncludeSettings = {
+    prefix: '@@',
+    basepath: '@file'
+}
+
 
 /* Tasks */
 
-function includeFiles() {
+function html() {
     return src(path.src.html)
-        .pipe(fileInclude({
-            prefix: '@@',
-            basepath: '@file'
-        }))
+        .pipe(fileInclude(fileIncludeSettings))
         .pipe(dest('./' + distPath))
+}
+
+function styles() {
+    return src(path.src.scss)
+        // .pipe(scss())
+        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(rename(function (path) {
+            path.basename += ".min"
+        }))
+        .pipe(autoprefixer({
+            overrideBrowserlist: ['last 10 version'],
+            grid: true,
+        }))
+        // .pipe(dest(srcPath + '/css'))
+        .pipe(dest(path.build.css))
+        .pipe(browserSync.stream())
 }
 
 function browsersync() {
     browserSync.init({
         server: {
-            baseDir: './' + srcPath
+            baseDir: './' + distPath
         }
     })
 }
@@ -92,18 +110,6 @@ function scripts() {
         .pipe(browserSync.stream())
 }
 
-function styles() {
-    return src(path.src.scss)
-        .pipe(scss({ outputStyle: 'compressed' }))
-        .pipe(rename('style.min.css'))
-        .pipe(autoprefixer({
-            overrideBrowserlist: ['last 10 version'],
-            grid: true,
-        }))
-        .pipe(dest('src/css'))
-        .pipe(browserSync.stream())
-}
-
 function build() {
     return src([
         'src/css/style.min.css',
@@ -132,7 +138,7 @@ exports.default = parallel(scripts, styles, browsersync, watching)
 
 
 /* Exports Tasks */
-exports.includeFiles = includeFiles
+exports.html = html
 exports.styles = styles
 exports.watch = watching
 exports.browsersync = browsersync
