@@ -3,7 +3,7 @@
 const { src, dest, watch, parallel, series } = require('gulp')
 const fileInclude = require('gulp-file-include')
 const scss = require('gulp-sass')(require('sass'))
-const concat = require('gulp-concat')
+const sourceMaps = require('gulp-sourcemaps')
 const rename = require('gulp-rename')
 const uglify = require('gulp-uglify-es').default
 const browserSync = require('browser-sync').create()
@@ -47,6 +47,12 @@ const fileIncludeSettings = {
     basepath: '@file'
 }
 
+const serverSettings = {
+    baseDir: distPath,
+    notify: false, //отключаем уведомления
+    online: true
+}
+
 
 /* Tasks */
 
@@ -59,6 +65,7 @@ function html() {
 
 function styles() {
     return src(path.src.scss)
+        .pipe(sourceMaps.init())
         .pipe(scss())
         // .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(rename(function (path) {
@@ -69,15 +76,14 @@ function styles() {
             grid: true,
         }))
         // .pipe(dest(srcPath + '/css'))
+        .pipe(sourceMaps.write())
         .pipe(dest(path.build.css))
         .pipe(browserSync.stream())
 }
 
 function browsersync() {
     browserSync.init({
-        server: {
-            baseDir: './' + distPath
-        }
+        server: serverSettings
     })
 }
 
@@ -96,6 +102,7 @@ async function images() {
         function (err, completed) {
             if (completed === true) { // Обновляем страницу по завершению
                 browserSync.reload()
+                console.log('images ____ OK')
             }
         }
     )
@@ -103,9 +110,17 @@ async function images() {
 
 function scripts() {
     return src([path.src.js])
-        // .pipe(concat('main.min.js'))
+        .pipe(rename(function (path) {
+            path.basename += ".bundle"
+        }))
         .pipe(uglify())
         .pipe(dest(path.build.js))
+        .pipe(browserSync.stream())
+}
+
+function fonts() {
+    return src([path.src.fonts])
+        .pipe(dest(path.build.fonts))
         .pipe(browserSync.stream())
 }
 
@@ -113,8 +128,6 @@ function watching() {
     watch([path.watch.css], styles)
     watch([path.watch.js, '!src/js/main.min.js'], scripts)
     watch([path.watch.images], images)
-    // watch(path.watch.html).on('change', browserSync.reload)
-    // watch(path.watch.html).on('change', html)
     watch([path.watch.html], html)
 }
 
@@ -129,8 +142,13 @@ exports.html = html
 exports.styles = styles
 exports.images = images
 exports.scripts = scripts
+exports.fonts = fonts
 exports.watch = watching
 exports.browsersync = browsersync
 exports.clean = cleandist
 
-exports.default = series(cleandist, parallel(html, styles, images), browsersync, watching)
+exports.default = series(
+    cleandist,
+    parallel(html, styles, scripts, images, fonts),
+    parallel(browsersync, watching)
+)
