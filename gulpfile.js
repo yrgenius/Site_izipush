@@ -13,8 +13,8 @@ const rimraf = require('gulp-rimraf')
 
 
 /* Paths */
-const srcPath = 'src/'
-const distPath = 'dist/'
+const srcPath = 'src'
+const distPath = 'dist'
 
 const path = {
     build: {
@@ -25,7 +25,7 @@ const path = {
         fonts: distPath + '/fonts/'
     },
     src: {
-        html: srcPath + '*.html',
+        html: srcPath + '/*.html',
         js: srcPath + '/js/*.js',
         css: srcPath + '/css/style.min.css',
         scss: srcPath + '/scss/*.scss',
@@ -33,13 +33,13 @@ const path = {
         fonts: srcPath + '/fonts/**/*.{eot,woff,woff2,ttf,svg}'
     },
     watch: {
-        html: srcPath + '**/*.html',
+        html: srcPath + '/**/*.html',
         js: srcPath + '/js/**/*.js',
         css: srcPath + '/scss/**/*.scss',
         images: srcPath + '/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}',
         fonts: srcPath + '/fonts/**/*.{eot,woff,woff2,ttf,svg}'
     },
-    clean: './' + distPath + '*'
+    clean: './' + distPath + '/*'
 }
 
 const fileIncludeSettings = {
@@ -54,12 +54,13 @@ function html() {
     return src(path.src.html)
         .pipe(fileInclude(fileIncludeSettings))
         .pipe(dest('./' + distPath))
+        .pipe(browserSync.stream())
 }
 
 function styles() {
     return src(path.src.scss)
-        // .pipe(scss())
-        .pipe(scss({ outputStyle: 'compressed' }))
+        .pipe(scss())
+        // .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(rename(function (path) {
             path.basename += ".min"
         }))
@@ -80,7 +81,7 @@ function browsersync() {
     })
 }
 
-async function imagecomp() {
+async function images() {
     imageComp(
         path.src.images,
         path.build.images,
@@ -101,30 +102,20 @@ async function imagecomp() {
 }
 
 function scripts() {
-    return src([
-        path.src.js
-    ])
-        .pipe(concat('main.min.js'))
+    return src([path.src.js])
+        // .pipe(concat('main.min.js'))
         .pipe(uglify())
-        .pipe(dest('src/js'))
+        .pipe(dest(path.build.js))
         .pipe(browserSync.stream())
 }
 
-function build() {
-    return src([
-        'src/css/style.min.css',
-        path.src.fonts,
-        path.src.js,
-        path.src.html,
-        path.src.images
-    ], { base: 'src' })
-        .pipe(dest('dist'))
-}
-
 function watching() {
-    watch([path.watch.html], styles)
+    watch([path.watch.css], styles)
     watch([path.watch.js, '!src/js/main.min.js'], scripts)
-    watch(path.watch.html).on('change', browserSync.reload)
+    watch([path.watch.images], images)
+    // watch(path.watch.html).on('change', browserSync.reload)
+    // watch(path.watch.html).on('change', html)
+    watch([path.watch.html], html)
 }
 
 function cleandist() {
@@ -133,16 +124,13 @@ function cleandist() {
 }
 
 
-exports.build = series(cleandist, imagecomp, build)
-exports.default = parallel(scripts, styles, browsersync, watching)
-
-
 /* Exports Tasks */
 exports.html = html
 exports.styles = styles
+exports.images = images
+exports.scripts = scripts
 exports.watch = watching
 exports.browsersync = browsersync
-exports.scripts = scripts
-exports.images = imagecomp
 exports.clean = cleandist
 
+exports.default = series(cleandist, parallel(html, styles, images), browsersync, watching)
