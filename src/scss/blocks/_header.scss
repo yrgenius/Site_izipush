@@ -21,7 +21,6 @@
 }
 
 .menu{
-    text-transform: capitalize;
     flex-grow: 1;
 
     &__list{
@@ -32,11 +31,13 @@
         gap: 24px;
     }
 
-
-
     &__item{
         position: relative;
 
+        &::first-letter{
+            text-transform: uppercase;
+        }
+        
         &:last-child{
             color: $yel;
         }

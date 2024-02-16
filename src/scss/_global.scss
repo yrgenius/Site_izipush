@@ -23,6 +23,12 @@ body{
     padding: 0 260px;
 }
 
+.tittle{
+    &::first-letter{
+        text-transform: uppercase;
+    }
+}
+
 // .button{
 //     padding: 12px 24px;
 //     font-size: 18px;
