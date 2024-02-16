@@ -65,12 +65,10 @@
     }
 
     &__all{
-        &-btn{
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        
         &-img, &_-text{
             display: inline;
         }
