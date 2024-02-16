@@ -12,10 +12,15 @@
     margin:50px 0 32px;
 
     &__left{
+        display: flex;
+        flex-flow: column wrap;
+        gap: 32px;
         width: 25%;
         
 
         @import './blocks/calendar';
+        @import './blocks/subscribe';
+
     }
 
     &__top{
