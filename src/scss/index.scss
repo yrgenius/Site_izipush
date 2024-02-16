@@ -20,11 +20,14 @@
         @import './blocks/calendar';
         @import './blocks/subscribe';
         @import './blocks/reklame';
-
     }
 
     &__top{
 
+    }
+
+    &__right{
+        @import './blocks/youtube';
     }
 }
 
