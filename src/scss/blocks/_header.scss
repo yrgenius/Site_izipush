@@ -1,4 +1,8 @@
 .header{
+    box-shadow: 0 0 10px rgba($bl, 0.6);
+}
+
+.header__wrapper{
     padding: 26px 0;
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +10,7 @@
     align-items: center;
 }
 
-.header__wrapper{
+.header__inner{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
