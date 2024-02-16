@@ -1,31 +1,48 @@
 .header{
-    padding: 30px 0 23px;
+    padding: 26px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    z-index: 1000;
+    align-items: center;
+}
+
+.header__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    flex-grow: 1;
+    margin-right: 31px;
 }
 
 .menu{
     text-transform: capitalize;
+    flex-grow: 1;
 
     &__list{
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 64px;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 24px;
     }
 
+
+
     &__item{
-        text-transform: capitalize;
         position: relative;
 
-        &:not(:last-child)::before, 
-        &:not(:last-child)::after{
+        &:last-child{
+            color: $yel;
+        }
+
+        &::before, 
+        &::after{
             content: '';
             position: absolute;
             height: 2px;
-            background: $white;
+            background: $bl;
             top: auto;
             bottom: 0;
             left: 50%;
@@ -43,3 +60,22 @@
     }
 
 }
+
+.authorization{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+
+    &__user{
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        p::first-letter{
+            text-transform: capitalize;
+        }
+    }
+}
+
+

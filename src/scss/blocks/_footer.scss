@@ -1,3 +1,22 @@
 .footer{
     background: $bl;
+    color: $white;
+    padding: 24px 0;
+
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    & .menu{
+        .menu__list{
+            justify-content: center;
+        }
+
+        &__item::before, &__item::after{
+                background: $white;
+        }
+    }
 }

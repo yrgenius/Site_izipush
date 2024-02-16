@@ -102,7 +102,6 @@ async function images() {
         function (err, completed) {
             if (completed === true) { // Обновляем страницу по завершению
                 browserSync.reload()
-                console.log('images ____ OK')
             }
         }
     )
