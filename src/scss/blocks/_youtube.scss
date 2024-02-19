@@ -10,7 +10,6 @@
         font-size: 24px;
         font-weight: 500;
         text-transform: capitalize;
-        margin-bottom: 24px;
         
         &::before{
             content: '';
@@ -23,7 +22,31 @@
         }
     }
 
-    
+    &__item{
+        padding: 20px 0;
+        
+        &:not(:last-child){
+          border-bottom: 2px solid rgba($bl, 0.3);  
+        }
+    }
+
+    &__link{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+
+        &-count{
+            flex: 1;
+        }
+
+        &::after{
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-image: url('./../images/aside/arrow-right.svg');
+        }
+    }
 
     &__all{
         display: flex;
