@@ -23,7 +23,11 @@
     }
 
     &__top{
+        flex: 1;
 
+        h1{
+            text-align: center;
+        }
     }
 
     &__right{
