@@ -1,0 +1,34 @@
+.main_search{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba($color: $bl, $alpha: 0.3);
+    margin-bottom: 45px;
+   
+    &__text{
+        flex: 1;
+        border-color: transparent;
+        border-radius: 10px 0 0 10px;
+        padding: 15px 24px;
+    }
+
+    &__select{
+        width: 150px;
+        border-color: transparent;
+        border-left: 2px solid rgba($color: $bl, $alpha: 0.1);
+        padding: 15px 24px;
+    }
+
+    &__btn{
+        padding: 0 28px;
+        border-color: transparent;
+        border-radius: 0 10px 10px 0;
+        background-color: $yel;
+        background-image: url('./../images/authorization/search.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+}

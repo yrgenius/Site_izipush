@@ -22,8 +22,10 @@
         @import './blocks/reklame';
     }
 
-    &__top{
+    &__content{
         flex: 1;
+
+        @import './blocks/main_search';
 
         h1{
             text-align: center;
