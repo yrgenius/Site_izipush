@@ -1,0 +1,13 @@
+.main_about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    gap: 20px;
+
+    &__wrapper{
+        display: flex;
+        flex-flow: column wrap;
+        gap: 20px;
+    }
+}
