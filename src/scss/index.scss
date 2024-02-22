@@ -27,10 +27,7 @@
 
         @import './blocks/main_search';
         @import './blocks/main_about';
-
-        h1{
-            text-align: center;
-        }
+        @import './blocks/advantages';
     }
 
     &__right{

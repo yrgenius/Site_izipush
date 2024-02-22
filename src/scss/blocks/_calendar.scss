@@ -1,7 +1,5 @@
 .calendar{
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba($color: $bl, $alpha: 0.3);
-    padding: 24px;
+    @include block;
 
     &__tittle {
         display: inline-flex;

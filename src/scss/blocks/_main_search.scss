@@ -1,9 +1,9 @@
 .main_search{
+    @include block;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba($color: $bl, $alpha: 0.3);
+    padding: 0;
     margin-bottom: 45px;
    
     &__text{

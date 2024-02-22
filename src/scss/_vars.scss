@@ -10,3 +10,9 @@ $gray: #e5e5e5;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@mixin block{
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba($color: $bl, $alpha: 0.3);
+    padding: 24px;
+}
