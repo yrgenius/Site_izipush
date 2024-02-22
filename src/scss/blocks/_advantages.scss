@@ -37,6 +37,24 @@
 
     &__item{
         @include block;
+
+        &-top{
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            gap: 15px;
+        }
+
+        &-title{
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 500;
+            color: $yel;
+        }
+
+        &-text{
+            word-break: break-all;
+        }
     }
 
 
