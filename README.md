@@ -5,7 +5,7 @@
 > ver. 0.2
 
 
-[Deploy (деплоя пока нет)](https://)
+[Deploy (ссылка кликабельна)](https://yrgenius.github.io/Site_izipush/)
 
 ---
 ### Команды Gulp
