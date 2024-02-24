@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.min.css">
+    <title>Главная страница</title>
+</head>
+
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img class="logo__img" src="./images/logo.svg" alt="site logo">
+                </a>
+            
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">главная</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">новые блогеры</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">youtube</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link button" href="#">instagram</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link button" href="#">tikTok</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link button" href="#">топ донатеров
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            
+                <button class="authorization__search">
+                    <img class="authorization__search-img" src="./images/authorization/search.svg" alt="Кнопка поиска">
+                </button>
+            </div>
+            
+            <div class="authorization">
+                <img class="authorization__flag" src="./images/authorization/flag_ru.svg" alt="Флаг России">
+        
+                <div class="authorization__user">
+                    <button class="authorization__user-btn">
+                        <img class="authorization__notif" src="./images/authorization/bell.svg" alt="Иконка оповещений">
+                    </button>
+                    
+                    <img class="authorization__user-img" src="./images/authorization/avatar.png" alt="Аватар пользователя">
+        
+                    <div class="authorization__user-data">
+                        <p class="authorization__user-data__user-name">pnsyan.photo</p>
+                        <p class="authorization__user-data__user-balance">баланс <span>2340</span> р.</p>
+                    </div>
+                </div>
+        
+                <button class="authorization__user-logout" >
+                    <img class="authorization__user-logout-img" src="./images/authorization/log-out.svg" alt="Кнопка выхода">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <section class="section">
+        <div class="container">
+            <div class="main">
+                <aside class="main__left">
+                    <section class="calendar">
+    <h2 class="calendar__tittle tittle">календарь</h2>  
+
+    <div class="calendar__inner">
+        <h3 class="tittle">cегодня</h3>
+        <ul class="calendar__list">
+            <li class="calendar__item">
+                <p class="calendar__item-time">19:30</p>
+                <p class="calendar__item-username">PolitWera</p>
+                <button class="calendar__item-btn">
+                    <img class="calendar__item-btn__img" src="./images/aside/button-play.svg" alt="Кнопка Play">
+                </button>
+            </li>
+            <li class="calendar__item">
+                <p class="calendar__item-time">19:00</p>
+                <p class="calendar__item-username">PolitWera</p>
+                <button class="calendar__item-btn">
+                    <img class="calendar__item-btn__img" src="./images/aside/button-play.svg" alt="Кнопка Play">
+                </button>
+            </li>
+            <li class="calendar__item">
+                <p class="calendar__item-time">10:30</p>
+                <p class="calendar__item-username">PolitWera</p>
+                <button class="calendar__item-btn">
+                    <img class="calendar__item-btn__img" src="./images/aside/microphone.svg" alt="Кнопка микрофон">
+                </button>
+            </li>
+            <li class="calendar__item">
+                <p class="calendar__item-time">10:00</p>
+                <p class="calendar__item-username">PolitWera</p>
+                <button class="calendar__item-btn">
+                    <img class="calendar__item-btn__img" src="./images/aside/button-play.svg" alt="Кнопка Play">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="calendar__inner">
+        <h3 class="tittle">завтра</h3>
+        <ul class="calendar__list">
+            <li class="calendar__item">
+                <p class="calendar__item-time">10:30</p>
+                <p class="calendar__item-username">PolitWera</p>
+                <button class="calendar__item-btn">
+                    <img class="calendar__item-btn__img" src="./images/aside/microphone.svg" alt="Кнопка микрофон">
+                </button>
+            </li>
+            <li class="calendar__item">
+                <p class="calendar__item-time">10:30</p>
+                <p class="calendar__item-username">PolitWera</p>
+                <button class="calendar__item-btn">
+                    <img class="calendar__item-btn__img" src="./images/aside/microphone.svg" alt="Кнопка микрофон">
+                </button>
+            </li>
+            <li class="calendar__item">
+                <p class="calendar__item-time">10:00</p>
+                <p class="calendar__item-username">PolitWera</p>
+                <button class="calendar__item-btn">
+                    <img class="calendar__item-btn__img" src="./images/aside/button-play.svg" alt="Кнопка Play">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <button class="calendar__all">
+        <img class="calendar__all-img" src="./images/aside/arrow-down.svg" alt="Стрелка вниз">
+        <p class="calendar__all-text">Смотреть весь календарь</p>
+    </button>
+    
+    
+</section>
+                    <section class="subscribe">
+    <h2 class="subscribe__tittle tittle">подписки</h2>  
+
+    <ul class="subscribe__list">
+        <li class="subscribe__item">
+            <img class="subscribe__avatar" src="./images/aside/avatar_2.png" alt="Аватар пользователя">
+            <p class="subscribe__item-username">Мудренич переводит</p>
+            <button class="subscribe__item-btn">
+                <img class="subscribe__item-btn__img" src="./images/aside/circle.svg" alt="Кнопка Play">
+            </button>
+        </li>
+        <li class="subscribe__item">
+            <img class="subscribe__avatar" src="./images/aside/avatar_1.png" alt="Аватар пользователя">
+            <p class="subscribe__item-username">PolitWera</p>
+            <button class="subscribe__item-btn">
+                <img class="subscribe__item-btn__img" src="./images/aside/circle.svg" alt="Кнопка Play">
+            </button>
+        </li>
+        <li class="subscribe__item">
+            <img class="subscribe__avatar" src="./images/aside/avatar_3.png" alt="Аватар пользователя">
+            <p class="subscribe__item-username">golushko_invest</p>
+            <button class="subscribe__item-btn">
+                <img class="subscribe__item-btn__img" src="./images/aside/mark.svg" alt="Кнопка Play">
+            </button>
+        </li>
+        <li class="subscribe__item">
+            <img class="subscribe__avatar" src="./images/aside/avatar_4.png" alt="Аватар пользователя">
+            <p class="subscribe__item-username">sergeymeza</p>
+            <button class="subscribe__item-btn">
+                <img class="subscribe__item-btn__img" src="./images/aside/circle.svg" alt="Кнопка Play">
+            </button>
+        </li>
+        <li class="subscribe__item">
+            <img class="subscribe__avatar" src="./images/aside/avatar_4.png" alt="Аватар пользователя">
+            <p class="subscribe__item-username">sergeymeza</p>
+            <button class="subscribe__item-btn">
+                <img class="subscribe__item-btn__img" src="./images/aside/mark.svg" alt="Кнопка Play">
+            </button>
+        </li>
+        <li class="subscribe__item">
+            <img class="subscribe__avatar" src="./images/aside/avatar_5.png" alt="Аватар пользователя">
+            <p class="subscribe__item-username">sergeymeza</p>
+            <button class="subscribe__item-btn">
+                <img class="subscribe__item-btn__img" src="./images/aside/mark.svg" alt="Кнопка Play">
+            </button>
+        </li>
+    </ul>
+    
+    <button class="subscribe__btn">
+        <img class="subscribe__btn-img" src="./images/aside/arrow-down.svg" alt="Стрелка вниз">
+        <p class="subscribe__btn-text">Показать еще 75 категорий</p>
+    </button>
+    
+</section>
+                    <section class="reklame">
+   <img class="reklame__img" src="./images/aside/reklame.png" alt="Изображение рекламы shaka jr">
+</section>
+                </aside>
+
+                <div class="main__content">
+                    <form class="main_search" action="localhost">
+    <input class="main_search__text" type="text" placeholder="Введите имя блогера">
+    <input class="main_search__select" type="text" placeholder="instagram">
+    <input class="main_search__btn" type="button">
+</form>
+                    <div class="main_about">
+    <div class="main_about__wrapper">
+        <p class="main_about__text">
+            Учитывая ключевые сценарии поведения, укрепление и развитие внутренней структуры прекрасно подходит для реализации кластеризации усилий. 
+        </p>
+        <p class="main_about__text">
+            Учитывая ключевые сценарии поведения, укрепление и развитие внутренней структуры прекрасно подходит для реализации кластеризации усилий. 
+        </p>
+    </div>
+    <img class="main__img" src="./images/authorization/foto.png" alt="Картинка с фото блогера">
+</div>
+                    <div class="main_advantages">
+    <h1 class="main_advantages__title">Преимущества сервиса</h1>
+
+    <div class="main_advantages__wrapper">
+        <div class="main_advantages__inner">
+            <h3 class="main_advantages__subtitle">Для пользователя</h3>
+            <ul class="main_advantages__list">
+                <li class="main_advantages__item">
+                    <div class="main_advantages__item-top">
+                        <img class="main_advantages__item-img" src="./images/authorization/icon-like.svg" alt="иконка like со звездочками">
+                        <h4 class="main_advantages__item-title">Мы - первые</h4>
+                    </div>
+                    <p class="main_advantages__item-text">
+                        Лишь тщательные исследования конкурентов могут быть объявлены нарушающими общечеловеческие нормы этики и морали.
+                    </p>
+                </li>
+                <li class="main_advantages__item">
+                    <div class="main_advantages__item-top">
+                        <img class="main_advantages__item-img" src="./images/authorization/icon-planet.svg" alt="иконка like со звездочками">
+                        <h4 class="main_advantages__item-title">Минимализм</h4>
+                    </div>
+                    <p class="main_advantages__item-text">
+                        Лишь тщательные исследования конкурентов могут быть объявлены нарушающими общечеловеческие нормы этики и морали.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="main_advantages__inner">
+            <h3 class="main_advantages__subtitle main_advantages__subtitle-blogers">Для блогера</h3>
+            <ul class="main_advantages__list">
+                <li class="main_advantages__item">
+                    <div class="main_advantages__item-top">
+                        <img class="main_advantages__item-img" src="./images/authorization/icon-snap.svg" alt="иконка like со звездочками">
+                        <h4 class="main_advantages__item-title">Удобство платформы</h4>
+                    </div>
+                    <p class="main_advantages__item-text">
+                        Лишь тщательные исследования конкурентов могут быть объявлены нарушающими общечеловеческие нормы этики и морали.
+                    </p>
+                </li>
+                <li class="main_advantages__item">
+                    <div class="main_advantages__item-top">
+                        <img class="main_advantages__item-img" src="./images/authorization/icon-dove.svg" alt="иконка like со звездочками">
+                    <h4 class="main_advantages__item-title">Свобода</h4>
+                    </div>
+                    <p class="main_advantages__item-text">
+                        Лишь тщательные исследования конкурентов могут быть объявлены нарушающими общечеловеческие нормы этики и морали.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                    <div class="add_bloggers">
+    <h2 class="add_bloggers__title">Последние добавленные блогеры:</h2>
+
+    <ul class="add_bloggers__list">
+        <li class="add_bloggers__item">
+            <img class="add_bloggers__avatar" src="./images/avatars/avatar_1.png" alt="Аватар блогера">
+            <p class="add_bloggers__text">Мудренич переводит</p>
+            <img class="add_bloggers__social" src="./images/authorization/icon-instagram.svg" alt="Иконка инстаграмма">
+            <p class="add_bloggers__amount">6k</p>
+        </li>
+        <li class="add_bloggers__item">
+            <img class="add_bloggers__avatar" src="./images/avatars/avatar_1.png" alt="Аватар блогера">
+            <p class="add_bloggers__text">Мудренич переводит</p>
+            <img class="add_bloggers__social" src="./images/authorization/icon-instagram.svg" alt="Иконка инстаграмма">
+            <p class="add_bloggers__amount">6k</p>
+        </li>
+        <li class="add_bloggers__item">
+            <img class="add_bloggers__avatar" src="./images/avatars/avatar_1.png" alt="Аватар блогера">
+            <p class="add_bloggers__text">Мудренич переводит</p>
+            <img class="add_bloggers__social" src="./images/authorization/icon-instagram.svg" alt="Иконка инстаграмма">
+            <p class="add_bloggers__amount">6k</p>
+        </li>
+        <li class="add_bloggers__item">
+            <img class="add_bloggers__avatar" src="./images/avatars/avatar_1.png" alt="Аватар блогера">
+            <p class="add_bloggers__text">Мудренич переводит</p>
+            <img class="add_bloggers__social" src="./images/authorization/icon-instagram.svg" alt="Иконка инстаграмма">
+            <p class="add_bloggers__amount">6k</p>
+        </li>
+        <li class="add_bloggers__item">
+            <img class="add_bloggers__avatar" src="./images/avatars/avatar_1.png" alt="Аватар блогера">
+            <p class="add_bloggers__text">Мудренич переводит</p>
+            <img class="add_bloggers__social" src="./images/authorization/icon-instagram.svg" alt="Иконка инстаграмма">
+            <p class="add_bloggers__amount">6k</p>
+        </li>
+        <li class="add_bloggers__item">
+            <img class="add_bloggers__avatar" src="./images/avatars/avatar_1.png" alt="Аватар блогера">
+            <p class="add_bloggers__text">Мудренич переводит</p>
+            <img class="add_bloggers__social" src="./images/authorization/icon-instagram.svg" alt="Иконка инстаграмма">
+            <p class="add_bloggers__amount">6k</p>
+        </li>
+        <li class="add_bloggers__item">
+            <img class="add_bloggers__avatar" src="./images/avatars/avatar_1.png" alt="Аватар блогера">
+            <p class="add_bloggers__text">Мудренич переводит</p>
+            <img class="add_bloggers__social" src="./images/authorization/icon-instagram.svg" alt="Иконка инстаграмма">
+            <p class="add_bloggers__amount">6k</p>
+        </li>
+    </ul>
+
+    <button class="add_bloggers__btn">
+        Смотреть еще
+        <img class="add_bloggers__btn-img" src="./images/arrow-right.svg" alt="Стрелка вправо">
+    </button>
+</div>
+                </div>
+
+                <aside class="main__right">
+                    <section class="youtube">
+    <h2 class="youtube__tittle tittle">youtube</h2>  
+
+    <ul class="youtube__list">
+        <li class="youtube__item">
+            <a class="youtube__link" href="#">
+                <p class="youtube__link-text">Развлекательные</p>
+                <p class="youtube__link-count">322</p>
+                <!-- <img class="youtube__link-img" src="./images/aside/arrow-right.svg" alt="Стрелка вправо"> -->
+            </a>
+        </li>
+        <li class="youtube__item">
+            <a class="youtube__link" href="#">
+                <p class="youtube__link-text">Тревел блогеры</p>
+                <p class="youtube__link-count">1245</p>
+                <!-- <img class="youtube__link-img" src="./images/aside/arrow-right.svg" alt="Стрелка вправо"> -->
+            </a>
+        </li>
+        <li class="youtube__item">
+            <a class="youtube__link" href="#">
+                <p class="youtube__link-text">Новостные</p>
+                <p class="youtube__link-count">32</p>
+                <!-- <img class="youtube__link-img" src="./images/aside/arrow-right.svg" alt="Стрелка вправо"> -->
+            </a>
+        </li>
+        <li class="youtube__item">
+            <a class="youtube__link" href="#">
+                <p class="youtube__link-text">Эксперементы</p>
+                <p class="youtube__link-count">67</p>
+                <!-- <img class="youtube__link-img" src="./images/aside/arrow-right.svg" alt="Стрелка вправо"> -->
+            </a>
+        </li>
+    </ul>
+
+    <button class="youtube__all">
+        <img class="youtube__all-img" src="./images/aside/arrow-down.svg" alt="Стрелка вниз">
+        <p class="youtube__all-text">Показать еще 75 категорий</p>
+    </button>
+    
+</section>
+                    <section class="donate">
+    <h2 class="donate__tittle tittle">донат проекту:</h2>  
+
+    <p class="donate__text">Наши передовые материалы во всех сферах науки и техники используются как практически, так и чисто теоретически.</p>
+
+    <h3 class="donate__form-tittle">Сумма</h3>
+
+    <form class="donate__form" method="post" action="index.html" autocomplete="off">
+        <input class="donate__form-amount" type="number" placeholder="100 руб.">
+        <input class="donate__form-btn" type="submit" value="Пожертвовать">
+
+    </form>
+    
+</section>
+                </aside>
+            </div>
+        </div>
+    </section>
+    
+     <footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a class="logo" href="#">
+                <img class="logo__img" src="./images/logo.svg" alt="site logo">
+            </a>
+        
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">главная</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">новые блогеры</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">youtube</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link button" href="#">instagram</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link button" href="#">tikTok</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link button" href="#">топ донатеров
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="footer__btn">
+                <img class="footer__btn-img" src="./images/footer/button-up.svg" alt="Кнопка прокрутки вверх">
+            </button>
+        </div>
+        
+        <p class="footer__copyright">&#169; все права защищены</p>
+    </div>
+</footer>
+        
+
+    <!-- SCRIPTS -->
+    <script src="js/main.bundle.js"></script>
+</body>
+
+</html>
