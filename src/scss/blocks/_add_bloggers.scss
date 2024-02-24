@@ -1,0 +1,42 @@
+.add_bloggers{
+    @include block;
+
+    &__title{
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+
+    &__item{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-bottom: 2px solid rgba($bl, 0.3);
+        margin-bottom: 18px;
+        padding-bottom: 18px;
+    }
+
+    &__avatar{
+        margin-right: 12px;
+    }
+
+    &__text{
+        margin-right: 8px;
+    }
+
+    &__social{
+        margin-right: 6px;
+    }
+
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        border: none;
+        border-radius: 10px;
+        width: 100%;
+        background-color: $yel;
+    }
+}

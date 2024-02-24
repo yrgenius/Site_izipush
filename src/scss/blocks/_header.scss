@@ -77,6 +77,10 @@
         align-items: center;
         gap: 18px;
 
+        &-data__user-name{
+            color: $yel;
+        }
+
         p::first-letter{
             text-transform: capitalize;
         }
