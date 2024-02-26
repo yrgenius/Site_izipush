@@ -5,32 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.min.css">
-    <title>Блогеры</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bloggers.min.css">
+    <title>Топ донаторов</title>
 </head>
 
 <body>
-    <div class="section">
-        <div class="container">
-           
-            @@include('./components/header.html')
+    @@include('./components/header.html')
 
+    <section class="section">
+        <div class="container">
             <div class="main">
-               
+                <aside class="main__left">
+                    @@include('./components/reklame.html')
+                    @@include('./components/subscribe.html')
+                </aside>
+
+                <div class="main__content">
+                    @@include('./components/main_search.html')
+                    @@include('./components/new_bloggers.html')
+                </div>
+
+                <aside class="main__right">
+                    @@include('./components/youtube.html')
+                    @@include('./components/donate.html')
+                </aside>
             </div>
         </div>
-    </div>
+    </section>
     
-    <footer class="footer">
-        <div class="container">
-            <a class="logo" href="#">
-                <img class="logo__img" src="./images/logo.svg" alt="site logo">
-            </a>
-        </div>
-    </footer>
+     @@include('./components/footer.html')
+        
 
     <!-- SCRIPTS -->
-    <script src="js/bloggers.bundle.js"></script>
+    <script src="js/main.bundle.js"></script>
 </body>
 
 </html>
